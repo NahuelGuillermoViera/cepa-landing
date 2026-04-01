@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+:root {
+    --background: rgb(9, 11, 13);
+    --muted-background: rgb(14, 16, 17);
+    --background-foreground: rgba(9, 11, 13, 0.76);
+    --foreground: rgb(238, 238, 238);
+    --muted-foreground: rgb(143, 143, 143);
+    --primary: rgb(251, 114, 43);
+    --dark-primary: rgb(187, 80, 27);
+    --muted-primary: rgba(251, 112, 43, 0.185);
+    --primary-foreground: rgba(251, 112, 43, 0.253);
+    --border: rgb(39, 41, 43);
+    --dark-border: rgba(39, 41, 43, 0.63);
+    --ring: rgb(251, 114, 43);
+    --button: rgb(238, 238, 238);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --background-foreground: rgba(238, 238, 238, 0.63);
+        --border: rgb(143, 143, 143);
+        --background: rgb(238, 238, 238);
+        --foreground: rgb(9, 11, 13);
+        --muted-foreground: rgba(9, 11, 13, 0.76);
+        --muted-background:  #ffffff;
+        --button: var(--muted-foreground);
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: none;
+    text-decoration: none;
+    width: 100%;
+}
+
+body {
+    margin: 0px;
+    font-family: "Geist", sans-serif;
+    color: var(--foreground);
+}
+
+/* Background div */
+.background {
+    width: 100%;
+    height: 200vh;
+    background-color: var(--background);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -20;
+}
+
+.header {
+    padding: 10px;
+    border-block: 3px var(--border) solid;
+    position: sticky;
+    top: 0px;
+    background-color: var(--background-foreground);
+    backdrop-filter: blur(20px);
+}
+
+.header .logo, #footer .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--foreground);
+}
+
+.header .logo .title, #footer .logo .title {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.header .logo img, #footer .logo img {
+    height: 50px;
+    width: 50px;
+}
+
+#hero {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#hero .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+#hero .title span {
+    color: var(--primary);
+}
+
+#hero .aboutMe {
+    font-size: 1.3rem;
+    color: var(--muted-foreground);
+    line-height: 2rem;
+}
+
+#hero .btns {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+#hero .btns button {
+    height: 70px;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 15px;
+    border: none;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+
+#hero .btns .cursesBtn {
+    background-color: var(--primary);
+}
+
+#hero .btns .cursesBtn:hover {
+    background-color: var(--dark-primary);
+}
+
+#hero .btns .dangerous-materialsButton {
+    background-color: var(--border);
+    color: var(--button);
+}
+
+#hero .btns .dangerous-materialsButton:hover {
+    background-color: var(--dark-border);
+}
+
+#hero .cardContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 4rem;
+}
+
+#hero .cardContainer .item {
+    background-color: var(--muted-background);
+    border: 2px var(--border) solid;
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#hero .cardContainer .item .logo {
+    padding: 18px;
+    background-color: var(--muted-primary);
+    width: fit-content;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero .cardContainer .item .logo img {
+    height: 35px;
+    width: 35px;
+}
+
+#hero .cardContainer .item .dataContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#hero .cardContainer .item .dataContainer .info {
+    color: var(--muted-foreground);
+    font-size: 1.1rem;
+}
+
+#hero .cardContainer .item .dataContainer .title {
+    font-size: 1.2rem;
+}
+
+#curses {
+    scroll-margin-top: 80px;
+    margin-top: 8rem;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+#curses .title {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    gap: 10px;
+}
+
+#curses .title .subtitle {
+    font-size: 1rem;
+    color: var(--primary);
+    font-weight: 500;
+}
+
+#curses .about {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--muted-foreground);
+}
+
+#curses .cardContainer .item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    margin-block: 50px;
+    background-color: var(--muted-background);
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px var(--border) solid;
+    transition: 300ms;
+}
+
+#curses .cardContainer .item:hover {
+    border-color: var(--primary-foreground);
+}
+
+#curses .cardContainer .item:hover .logo {
+    background-color: var(--primary-foreground);
+}
+
+#curses .cardContainer .item .logo {
+    background-color: var(--muted-primary);
+    width: fit-content;
+    height: fit-content;
+    padding: 18px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 300ms;
+}
+
+#curses .cardContainer .item .logo img{
+    width: 35px;
+    height: 35px;
+}
+
+#curses .cardContainer .item .title {
+    font-size: 1.6rem;
+}
+
+#curses .cardContainer .item .info {
+    font-size: 1.2rem;
+    color: var(--muted-foreground);
+    line-height: 1.8rem;
+}
+
+#curses .cardContainer .item button {
+    height: 70px;
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: 15px;
+    border: none;
+    transition: 300ms;
+    cursor: pointer;
+    background-color: var(--primary);
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#curses .cardContainer .item button:hover {
+    background-color: var(--dark-primary);
+}
+
+#curses .cardContainer .item button img {
+    width: 1.3rem;
+}
+
+
+
+#dangerous-materials {
+    scroll-margin-top: 80px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 6rem;
+}
+
+#dangerous-materials .subtitle {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: var(--primary);
+}
+
+#dangerous-materials .title {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+#dangerous-materials .subtitle .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+    width: fit-content;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+#dangerous-materials .subtitle .logo img {
+    height: 35px;
+}
+
+#dangerous-materials .info {
+    font-size: 1.2rem;
+    color: var(--muted-foreground);
+}
+
+#dangerous-materials .card .title img {
+    height: 30px;
+}
+
+#dangerous-materials .card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--muted-background);
+    border: 2px var(--border) solid;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+#dangerous-materials .card .listed {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: var(--muted-foreground);
+    font-size: 1.15rem;
+}
+
+
+#dangerous-materials .card .listed img {
+    height: 28px;
+}
+
+
+#dangerous-materials .btn a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#dangerous-materials .btn button {
+    height: 70px;
+    width: 95%;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: 15px;
+    border: none;
+    transition: 300ms;
+    cursor: pointer;
+    background-color: var(--primary);
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#dangerous-materials .btn button:hover {
+    background-color: var(--dark-primary);
+}
+
+#dangerous-materials .btn button img {
+    width: 1.3rem;
+}
+
+#footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8rem;
+    background-color: var(--muted-background);
+    border-top: 2px var(--border) solid;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    gap: 35px;
+}
+
+#footer .contact {
+    display: flex;
+    flex-direction: column;
+    grid-column: 5 / 7;
+    gap: 10px;
+    align-items: start;
+}
+
+#footer .contact .mail, #footer .contact .location, #footer .contact .phone {
+    font-size: 1.2rem;
+    color: var(--muted-foreground);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#footer .cp {
+    width: 95%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--muted-foreground);
+    border-top: 2px var(--border) solid;
+    text-align: center;
+}
+
+#footer .contact .mail img, #footer .contact .location img, #footer .contact .phone img {
+    width: 25px;
+}
+
+
+/*Responsive, with > 768*/
+
+@media (min-width: 768px) {
+    #hero, #curses, #dangerous-materials {
+        margin-inline: 30px;
+    }
+
+    #hero .title {
+        max-width: 55rem;
+    }
+
+    a {
+        width: fit-content;
+    }
+
+    #hero .btns {
+        display: flex;
+        flex-direction: row;
+        justify-self: start;
+    }
+
+    #hero .btns .cursesBtn {
+        width: 200px;
+    }
+
+    #hero .btns .dangerous-materialsButton {
+        width: 300px;
+    }
+
+    #curses .cardContainer .interested a button {
+        width: 300px;
+    }
+}
+
+/*Responsive, with > 1280*/
+@media (min-width: 1280px) {
+    #hero .cardContainer {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #hero .cardContainer .item {
+        width: 100%;
+    }
+
+    #curses .cardContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 30px;
+        grid-template-rows: auto auto;
+    }
+
+    #curses .cardContainer .item {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    #curses .cardContainer .interested{
+        grid-column: span 3;
+        margin-top: 30px;
+        padding-block: 50px;
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        grid-template-rows: auto auto;
+    }
+
+    #curses .cardContainer .interested .title {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        justify-self: start;
+    }
+
+    #curses .cardContainer .interested .info {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        justify-self: start;
+    }
+
+    #curses .cardContainer .interested a {
+        grid-row: span 2;
+        grid-column: span 1;
+        justify-self: end;
+    }
+
+    #curses .cardContainer .interested a button {
+        width: 300px;
+    }
+
+    #dangerous-materials {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4,1fr)
+    }
+
+    #dangerous-materials .title {
+        align-self: center;
+    }
+
+    #dangerous-materials .btn {
+        grid-row: span 2;
+        display: flex;
+        align-items: end;
+    }
+
+    #dangerous-materials .card{
+        grid-row: span 3;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+    }
+
+    #dangerous-materials .card .title {
+        grid-column: span 2;
+    }
+
+    #footer {
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+    }
+
+    #footer .logo {
+        grid-column: 1/3;
+        justify-self: center;
+    }
+
+    #footer .mail{
+        grid-column: 4/6;
+        justify-self: end;
+    }
+
+    #footer .location {
+        grid-column: 6/7;
+    }
+
+    #footer .cp {
+        grid-column: span 6;
+        justify-self: center;
+    }
+}
