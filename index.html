@@ -13,7 +13,8 @@
     <meta property="og:description" content="Capacitación oficial habilitada por el MTOP en Uruguay. Certificación incluida.">
     <meta property="og:image" content="https://mercanciaspeligrosascepa.uy/assets/logo_cepa.png">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mercanciaspeligrosascepa.uy">
+    <meta property="og:url" content="https://mercanciaspeligrosascepa.uy/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
@@ -21,9 +22,34 @@
     <link rel="icon" type="image/x-icon" href="/assets/logo_cepa.png">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://mercanciaspeligrosascepa.uy">
+    <link rel="canonical" href="https://mercanciaspeligrosascepa.uy/">
     <link rel="stylesheet" href="css/styles.css" />
-    <title>CEPA Mercancias</title>
+    <title>Curso de Mercancías Peligrosas en Uruguay | CEPA Mobility</title>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://mercanciaspeligrosascepa.uy/#organization",
+            "name": "CEPA Mobility",
+            "url": "https://mercanciaspeligrosascepa.uy/",
+            "logo": "https://mercanciaspeligrosascepa.uy/assets/logo_cepa.png"
+          },
+          {
+            "@type": "Course",
+            "@id": "https://mercanciaspeligrosascepa.uy/#curso",
+            "name": "Curso de Mercancías Peligrosas en Uruguay",
+            "description": "Curso para el transporte terrestre de mercancías peligrosas en Uruguay, con capacitación y certificación.",
+            "provider": {
+              "@id": "https://mercanciaspeligrosascepa.uy/#organization"
+            },
+            "inLanguage": "es-UY"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div class="background"></div>
@@ -33,15 +59,15 @@
       <a href="/#">
         <div class="logo">
           <img loading="lazy" src="assets/logo_cepa.png" alt="Logo" />
-          <h1 class="title"> CEPA Mobility </h1>
+          <h2 class="title"> CEPA Mobility </h2>
         </div>
       </a>
     </header>
 
     <section id="hero" class="hero">
-      <h2 class="title">
+      <h1 class="title">
         CURSO PARA TRANSPORTE TERRESTRE DE <span>MERCANCíAS PELIGROSAS.</span>
-      </h2>
+      </h1>
 
       <p class="aboutMe">
         Centro de capacitacion habilitado para cursos de conducción profesional
@@ -92,7 +118,7 @@
           <div class="logo">
             <img loading="lazy" src="assets/car.svg" alt="Primera vez curso mercancías peligrosas" />
           </div>
-          <span class="title">Primera Vez</span>
+          <h3 class="title">Primera Vez</h3>
           <span class="info">
             Capacitación para todo tipo de conductores de vehículos de
             transporte de mercancías peligrosas con licencia de conducir mayor a
@@ -103,7 +129,7 @@
           <div class="logo">
             <img loading="lazy" src="assets/truck.svg" alt="Renovación curso mercancías peligrosas" />
           </div>
-          <span class="title">Renovación</span>
+          <h3 class="title">Renovación</h3>
           <span class="info">
             Capacitación para conductores de vehículos de transporte de
             mercancías peligrosas con Certificado primera vez vencido hace menos
@@ -114,7 +140,7 @@
           <div class="logo">
             <img loading="lazy" src="assets/tritren.svg" alt="Curso acompañante mercancías peligrosas" />
           </div>
-          <span class="title">Acompañante</span>
+          <h3 class="title">Acompañante</h3>
           <span class="info">
             Capacitación para acompañantes de conductores de vehículos de
             transporte de mercancías peligrosas.
@@ -138,10 +164,10 @@
         seguridad vigentes en Uruguay
       </p>
       <div class="card">
-        <span class="title">
+        <h2 class="title">
           <img loading="lazy" src="assets/doc.svg" alt="doc" />
           El curso incluye
-        </span>
+        </h2>
         <span class="listed">
           <img loading="lazy" src="assets/list.svg" alt="list" />
           Habilitación oficial del MTOP

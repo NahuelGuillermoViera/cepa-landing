@@ -174,7 +174,7 @@ body {
 }
 #dangerous-materials {
   scroll-margin-top: 80px;
-  margin-top: 8rem;
+  margin-top: 4rem;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -348,7 +348,7 @@ body {
   flex-direction: column;
   align-items: start;
   gap: 20px;
-  margin-block: 50px;
+  margin-top: 50px;
   background-color: var(--muted-background);
   padding: 30px;
   border-radius: 15px;
